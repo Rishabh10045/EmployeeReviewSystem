@@ -1,0 +1,54 @@
+
+<link rel="stylesheet" href="/css/home.css">
+<div id="body-container">
+    <div class="w-4 border ">
+        <div class="text-white border-bottom border-dark" style="background-color: rgb(157 49 111 / 51%);" >
+            <div class="mx-auto text-center">
+                <h1>Leave a review </h1>
+            </div>
+        </div>
+        <div >
+            <% for(let r of recipients){ %> 
+                <div class="card no-b" style="background-color: rgba(158, 253, 255, 0)">
+                    <div class="card-body " style="background-color: rgb(216 225 225 / 0%);">
+                      <h5 class="card-title">To:<%= r.name %></h5>
+                      <form action="/reviews/newReview/<%= r._id %>" method="get">
+                        <textarea
+                        class="form-control"
+                        placeholder="Write a review"
+                        id="floatingTextarea2"
+                        name="newReview"
+                        rows="5"
+                        style="background-color: #f0f8ff6b;">
+                        </textarea>
+                        <div class="right-alligned m-10">
+                            <button type="submit" class="btn btn-primary">submit </button>
+                        </div>
+                      </form>
+                    </div>
+                </div>
+            <% } %>
+        </div>
+    </div>
+    <div class="w-4 border ">
+        
+        <div class="text-white border-bottom border-light " style="background-color: rgb(157 49 111 / 51%);" >
+            <div class="mx-auto text-center " >
+                <h1>My Reviews</h1>
+            </div>
+        </div>
+        <div >
+            <% for(let i = 0; i < reviews.length; i++) { %>
+                <div class="card " style="background-color: rgba(158, 253, 255, 0)">
+                    <div class="card-body" style="    background-color: rgb(45 182 170 / 77%);
+                    ">
+                      <h5 class="card-title">From : <%= reviews[i].name %></h5>
+                      <p class="card-text">message : <%= reviews[i].review %></p>
+                      </form>
+                    </div>
+                </div>
+            <% } %>
+        </div>
+    </div>
+        
+</div>
