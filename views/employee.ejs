@@ -1,11 +1,11 @@
 
-<h3 class="text-center mt-3" >All Employees</h3>
+<h3 class="text-center mt-3" style="background-color: rgba(70, 186, 32, 0.751);">All Employees</h3>
 
 <div class="container mt-4 " >
 
-    <table class="table table-striped table-hover">
+    <table class="table table-striped table-hover" >
         <thead>
-            <tr >
+            <tr style="background-color: rgba(234, 45, 99, 0.479);">
                 <th scope="col">Name</th>
                 <th scope="col">Email</th>
                 <th scope="col">Password</th>
@@ -16,7 +16,7 @@
 
         <tbody>
             <% for(let i=0;i < employees.length;i++){ %>
-                <tr >
+                <tr style="background-color: rgb(32, 186, 186);">
                 <td><%=employees[i].name %></td>
                 <td><%=employees[i].email %></td>
                 <td><%=employees[i].password %></td>
